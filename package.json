@@ -1,0 +1,8 @@
+{
+  "name": "pleaides",
+  "private": true,
+  "packageManager": "pnpm@12.15.0",
+  "scripts": {
+    "validate": "bash tools/validate.sh"
+  }
+}
