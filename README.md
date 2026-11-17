@@ -21,3 +21,11 @@ repository hygiene checks, and is the same command CI uses.
 ## Trademark
 
 Natuleadan® upleaides™ is a trademark of Natuleadan.
+
+## Branching workflow
+
+`main` is the protected production branch and the default branch. `dev` is the
+protected integration branch. Work happens on short-lived branches
+(`feat/...`, `fix/...`, `docs/...`, `refactor/...`, `ci/...`) and reaches `dev`
+through a pull request; `dev` is consolidated into `main` afterwards. Never
+push directly to `main` or `dev`, and never rewrite published history.
