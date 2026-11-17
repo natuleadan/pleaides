@@ -3,6 +3,7 @@
   "private": true,
   "packageManager": "pnpm@12.15.0",
   "scripts": {
+    "prepare": "husky",
     "validate": "node tools/validate.mjs",
     "notices": "node helpers/tools/third-party-notices.mjs",
     "notices:check": "node helpers/tools/third-party-notices.mjs --check"
