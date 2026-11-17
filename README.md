@@ -1,31 +1,45 @@
-# Natuleadan® upleaides™
+# Natuleadan® Pleaides™
 
-> Reusable utilities: skills, instructions, workflows, agents and capabilities.
+> Reusable utilities for AI coding agents.
 
-Technical documentation for the repository. Product scope and specifications
-live in `docs/`; work is tracked in `tareas/`.
+## What it is
 
-## Structure
+Pleaides collects the reusable building blocks around agents: skills, instructions, workflows, agent definitions and native Rust capabilities. Skills written here are first-party and published from this repository.
 
-| Path | Purpose |
-|---|---|
-| `crates/` | Rust library crates, one concern per crate |
-| `docs/` | Product documentation |
-| `tools/` | Validation entry points |
+## What it provides
 
-## Validation
+It provides one folder per skill with a `SKILL.md` at its root, reusable instructions and workflows, and native Rust utilities exposed as capabilities that other agents can consume.
 
-Run `pnpm validate` before pushing. It runs formatting, linting, tests and
-repository hygiene checks, and is the same command CI uses.
+## Architecture
+
+Each skill is self-contained with frontmatter describing when to use it. Extra material becomes a sub-skill or a `references/` folder, never a new top-level skill, keeping the catalog small and predictable.
+
+## Repository layout
+
+The workspace groups the library crate under `crates/`, documentation under `docs/` and validation entry points under `tools/`. All source lives in the development branch until release.
+
+## Getting started
+
+Clone `https://github.com/natuleadan/pleaides.git`. This branch holds only the
+project baseline; the source code, build manifests and full validation suite
+live in the `dev` branch. Switch to `dev` to build and run the project.
+
+## Development
+
+Work happens on short-lived branches merged into `dev`. Commits follow
+`type(scope): description` with a body of at least three bullets; commitlint
+enforces the policy locally and in CI. The `main` branch is protected and holds
+only this minimal baseline until the first release.
+
+## Status
+
+Pending refactor from a skills-only repository into a broader utilities repository with native Rust code. The first published version will be 0.1.0.
+
+## License
+
+Apache-2.0. See [LICENSE](LICENSE).
 
 ## Trademark
 
-Natuleadan® upleaides™ is a trademark of Natuleadan.
-
-## Branching workflow
-
-`main` is the protected production branch and the default branch. `dev` is the
-protected integration branch. Work happens on short-lived branches
-(`feat/...`, `fix/...`, `docs/...`, `refactor/...`, `ci/...`) and reaches `dev`
-through a pull request; `dev` is consolidated into `main` afterwards. Never
-push directly to `main` or `dev`, and never rewrite published history.
+Natuleadan® Pleaides™ is a trademark of Natuleadan. Other constellation
+repositories: Pulsar, Aurora, Pleaides, Andromeda and Orion.
