@@ -1,31 +1,37 @@
-# Natuleadan® upleaides™
+# Natuleadan® Pleaides™
 
-> Reusable utilities: skills, instructions, workflows, agents and capabilities.
+> Reusable utilities for AI coding agents.
 
-Technical documentation for the repository. Product scope and specifications
-live in `docs/`; work is tracked in `tareas/`.
+Pleaides collects the reusable building blocks around agents: skills, instructions, workflows, agent definitions and native Rust capabilities. Skills written here are first-party and published from this repository.
 
-## Structure
+## What it provides
+
+- One folder per skill with a `SKILL.md` at its root.
+- Reusable instructions, workflows and agent definitions.
+- Native Rust capabilities exposed as utilities.
+
+## Layout
 
 | Path | Purpose |
 |---|---|
-| `crates/` | Rust library crates, one concern per crate |
+| `crates/pleaides/` | Library crate |
 | `docs/` | Product documentation |
 | `tools/` | Validation entry points |
 
-## Validation
+## Development
 
-Run `pnpm validate` before pushing. It runs formatting, linting, tests and
-repository hygiene checks, and is the same command CI uses.
+Requires Rust 1.100 or newer and pnpm. Run the same checks locally that CI
+runs before opening a pull request.
 
-## Trademark
+```sh
+pnpm validate
+```
 
-Natuleadan® upleaides™ is a trademark of Natuleadan.
+## Documentation
 
-## Branching workflow
+- [Architecture](docs/ARCHITECTURE.md)
+- [Contributing](CONTRIBUTING.md)
 
-`main` is the protected production branch and the default branch. `dev` is the
-protected integration branch. Work happens on short-lived branches
-(`feat/...`, `fix/...`, `docs/...`, `refactor/...`, `ci/...`) and reaches `dev`
-through a pull request; `dev` is consolidated into `main` afterwards. Never
-push directly to `main` or `dev`, and never rewrite published history.
+## License
+
+Apache-2.0. See [LICENSE](LICENSE).
