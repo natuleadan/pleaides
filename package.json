@@ -3,6 +3,14 @@
   "private": true,
   "packageManager": "pnpm@12.15.0",
   "scripts": {
-    "validate": "bash tools/validate.sh"
-  }
+    "validate": "bash tools/validate.sh",
+    "notices": "node helpers/tools/third-party-notices.mjs",
+    "notices:check": "node helpers/tools/third-party-notices.mjs --check"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "husky": "^9.1.7"
+  },
+  "type": "module"
 }
