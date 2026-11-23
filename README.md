@@ -20,7 +20,7 @@ Pleaides is a sovereign, pure-Rust utility and control runtime for **robotic org
 
 Pleaides follows the layered modular six-file modular domain architecture (`entity`, `dto`, `repository`, `service`, `controller`, `mod`) inside a pure-Cargo workspace (`crates/core` and `crates/xtask`), governed by eight automated validation gates and a 3-day dependency publish cooldown.
 
-> **Current scope:** This release ships the native validation harness, the six-file modular reference domain (`modules/math`), and the crate contracts. Transports, sandboxes, domain engines and protocol integrations described below are planned milestones, not shipped capabilities.
+> **Current scope:** This release ships the native validation harness, the six-file modular reference domain (`modules/math`), and the crate contracts. Transports, sandboxes, domain engines and protocol integrations described throughout this document are planned milestones, not shipped capabilities.
 
 ## 2. Why Pleaides?
 
